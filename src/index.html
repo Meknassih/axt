@@ -70,9 +70,16 @@
                         <div class="mb-3">
                             <label for="lengthInput" class="form-label">Length: {{lengthInput}}</label>
                             <input type="range" class="form-range" min="8" max="64" id="lengthInput"
-                                v-model="lengthInput" v-on:change="generatePassword">
-                            <div id="lengthInputInputHelp" class="form-text">Resize the length of your password between
+                                v-model="lengthInput" aria-describedby="lengthInputHelp" v-on:change="generatePassword">
+                            <div id="lengthInputHelp" class="form-text">Resize the length of your password between
                                 8 and 64 characters.</div>
+                        </div>
+                        <div class="form-check mb-3">
+                            <label class="form-check-label" for="uppercaseCheckboxInput">
+                                Include uppercase characters
+                            </label>
+                            <input class="form-check-input" type="checkbox" value="" id="uppercaseCheckboxInput"
+                                v-model="uppercaseCheckboxInput" v-on:change="generatePassword">
                         </div>
                     </form>
                 </div>
