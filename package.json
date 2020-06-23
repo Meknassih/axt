@@ -1,0 +1,26 @@
+{
+  "name": "axt",
+  "version": "1.0.0",
+  "description": "Lightweight password generator web app",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Meknassih/axt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Meknassih/axt/issues"
+  },
+  "homepage": "https://github.com/Meknassih/axt#readme",
+  "dependencies": {
+    "vue": "^2.6.11"
+  },
+  "alias": {
+    "vue": "./node_modules/vue/dist/vue.common.js"
+  }
+}
