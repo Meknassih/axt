@@ -22,5 +22,8 @@
   },
   "alias": {
     "vue": "./node_modules/vue/dist/vue.common.js"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.5"
   }
 }
