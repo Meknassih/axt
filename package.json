@@ -19,12 +19,15 @@
   },
   "homepage": "https://github.com/Meknassih/axt#readme",
   "dependencies": {
+    "@types/crypto-js": "^3.1.47",
+    "crypto-js": "^4.0.0",
     "vue": "^2.6.11"
   },
   "alias": {
     "vue": "./node_modules/vue/dist/vue.common.js"
   },
   "devDependencies": {
+    "sass": "^1.26.9",
     "typescript": "^3.9.5"
   }
 }

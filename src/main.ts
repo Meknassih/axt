@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import CryptoJS from 'crypto-js';
 
 const app = new Vue({
     el: '#app',
@@ -9,8 +10,7 @@ const app = new Vue({
     },
     methods: {
         generatePassword: function (event) {
-            console.log(event);
-            this.generatedPasswordInput = this.domainInput + this.masterPasswordInput;
+            this.generatedPasswordInput = CryptoJS.HmacSHA224(this.domainInput, this.masterPasswordInput);
         }
     }
 });
