@@ -1,26 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" class="h-100">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Easily and quickly generate passwords online without storing them.">
     <title>Axt Password Generator</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
         integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles.scss">
 </head>
 
-<body class="d-flex flex-column h-100">
+<body class="d-flex flex-column">
     <main id="app" class="flex-shrink-0 p-3">
         <div class="container">
+            <span class="logo">
+                <!-- Generated with https://www.blobmaker.app -->
+                <svg height="64px" width="64px" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#FF0066"
+                        d="M31.7,-67.6C32.9,-54.3,20,-29.2,20,-16C19.9,-2.7,32.8,-1.4,41.9,5.3C51.1,12,56.6,23.9,50.4,26.2C44.1,28.5,26,21.2,15.7,17.1C5.3,13,2.7,12.3,-5.6,22C-13.8,31.7,-27.7,51.8,-41.9,58C-56.1,64.3,-70.7,56.8,-78.9,44.8C-87.2,32.8,-89,16.4,-79.3,5.6C-69.5,-5.2,-48.3,-10.4,-34.7,-13.1C-21.1,-15.8,-15.2,-16,-10.7,-27.4C-6.2,-38.8,-3.1,-61.4,6.1,-72C15.3,-82.5,30.6,-81,31.7,-67.6Z"
+                        transform="translate(100 100)" />
+                </svg>
+            </span>
             <h1 class="title">Axt</h1>
-            <h2 class="subtitle text-muted">Quick and easy online password generator</h2>
+            <h2 class="subtitle text-secondary">Quick and easy online password generator</h2>
 
             <div class="row my-5">
                 <div class="col">
                     <h3>Generate a password</h3>
-                    <form class="border rounded px-3 py-2">
+                    <form class="rounded px-3 py-2 panel">
                         <div class="mb-3">
                             <label for="domainInput" class="form-label">Domain</label>
                             <input type="text" class="form-control" id="domainInput" aria-describedby="domainInputHelp"
@@ -89,27 +98,33 @@
                 <div class="col">
                     <div class="description">
                         <h3>What is this?</h3>
-                        <p>
-                            This simple web app allows you to <strong>generate or regenerate a password</strong> for any
-                            of your websites or applications. Simply fill in the fields below to generate a password.
-                        </p>
-                        <p>
-                            You can also reinsert the same date to find a password you regenarated before. Technically,
-                            nobody can find out about your generated passwords unless they can figure out the exact
-                            domain and master password, although I do not guarantee anything.</p>
-                        <p>
-                            <strong>This app does not store any of the data you type in</strong>. Not even in your own
-                            PC or browser. Just close it and it is all gone. 🤐
-                        </p>
+                        <div class="panel rounded px-3 py-2">
+                            <p>
+                                This simple web app allows you to <strong>generate or regenerate a password</strong> for
+                                any
+                                of your websites or applications. Simply fill in the fields below to generate a
+                                password.
+                            </p>
+                            <p>
+                                You can also reinsert the same date to find a password you regenarated before.
+                                Technically,
+                                nobody can find out about your generated passwords unless they can figure out the exact
+                                domain and master password, although I do not guarantee anything.</p>
+                            <p>
+                                <strong>This app does not store any of the data you type in</strong>. Not even in your
+                                own
+                                PC or browser. Just close it and it is all gone. 🤐
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-    <footer class="footer mt-auto py-3 bg-light">
+    <footer class="footer mt-auto py-3">
         <div class="container">
-            <span class="text-muted">Developed by <a href="https://github.com/Meknassih">Meknassih</a> under <a
-                    style="white-space: nowrap" rel="license" href="https://opensource.org/licenses/AGPL-3.0">GNU Affero
+            <span>Developed by <a href="https://github.com/Meknassih">Meknassih</a> under <a style="white-space: nowrap"
+                    rel="license" href="https://opensource.org/licenses/AGPL-3.0">GNU Affero
                     General Public License v3.0</a></span>
         </div>
     </footer>

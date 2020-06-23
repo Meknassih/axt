@@ -1,11 +1,35 @@
-h2 {
-    font-size: 1.5em;
+@import 'bootstrap_overrides';
+
+body {
+    background-image: linear-gradient(to left top, #ff0066, #fd3b4f, #f5593c, #ea712d, #dc8526);
+    color: whitesmoke;
+    
+    h1.title {
+        display: inline-block;
+    }
+    
+    h3, h4 {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    label {
+        font-weight: bold;
+    }
+
+    form {
+        .form-text {
+            font-size: smaller;
+        }
+    }
+
+    .panel {
+        background-color: #ffffff1f;
+    }
+
+    footer {
+        font-size: smaller;
+        background-color: #ffffff54;
+        color: #201f1f;
+    }
 }
 
-footer {
-    font-size: smaller;
-}
-
-div.form-text {
-    font-size: smaller;
-}
