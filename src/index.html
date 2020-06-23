@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
 
 <head>
     <meta charset="UTF-8">
@@ -11,21 +11,31 @@
     <link rel="stylesheet" href="./styles.scss">
 </head>
 
-<body>
-    <div id="app">
+<body class="d-flex flex-column h-100">
+    <main id="app" class="flex-shrink-0 p-3">
         <div class="container">
             <h1 class="title">Axt</h1>
             <h2 class="subtitle text-muted">Quick and easy online password generator</h2>
 
             <div class="row my-5">
                 <div class="col">
-                    <form>
+                    <h3>Generate a password</h3>
+                    <form class="border rounded px-3 py-2">
                         <div class="mb-3">
                             <label for="domainInput" class="form-label">Domain</label>
                             <input type="text" class="form-control" id="domainInput" aria-describedby="domainInputHelp"
                                 placeholder="example.com" v-model="domainInput" v-on:input="generatePassword">
                             <div id="domainInputHelp" class="form-text">Enter the domain of the website (without the
                                 "www." part) or the app name.</div>
+                        </div>
+                        <div class="text-center">
+                            <svg class="bi bi-plus text-secondary" width="2em" height="2em" viewBox="0 0 16 16"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z" />
+                                <path fill-rule="evenodd"
+                                    d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z" />
+                            </svg>
                         </div>
                         <div class="mb-3">
                             <label for="masterPasswordInput" class="form-label">Master password</label>
@@ -36,11 +46,21 @@
                                 only password you have to remember. It is the same for all your websites and
                                 applications.</div>
                         </div>
+                        <div class="text-center">
+                            <svg class="bi bi-arrow-down text-secondary" width="2em" height="2em" viewBox="0 0 16 16"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 9.646a.5.5 0 0 1 .708 0L8 12.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+                                <path fill-rule="evenodd"
+                                    d="M8 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+                            </svg>
+                        </div>
                         <div class="mb-3">
                             <label for="generatedPasswordInput" class="form-label">Generated password</label>
                             <input type="text" id="generatedPasswordInput" class="form-control"
                                 aria-describedby="generatedPasswordInputHelp" disabled v-model="generatedPasswordInput">
-                            <div id="generatedPasswordInputHelp" class="form-text">This is your generated password,
+                            <div id="generatedPasswordInputHelp" class="form-text">This is your generated
+                                password,
                                 you
                                 can copy it and use it. You cannot edit it because it is computed from the two fields
                                 above.</div>
@@ -52,6 +72,7 @@
             <div class="row">
                 <div class="col">
                     <div class="description">
+                        <h3>What is this?</h3>
                         <p>
                             This simple web app allows you to <strong>generate or regenerate a password</strong> for any
                             of your websites or applications. Simply fill in the fields below to generate a password.
@@ -68,7 +89,14 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">Developed by <a href="https://github.com/Meknassih">Meknassih</a> under <a
+                    style="white-space: nowrap" rel="license" href="https://opensource.org/licenses/AGPL-3.0">GNU Affero
+                    General Public License v3.0</a></span>
+        </div>
+    </footer>
 </body>
 
 <script src="./main.ts"></script>
