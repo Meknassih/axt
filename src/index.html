@@ -65,6 +65,15 @@
                                 can copy it and use it. You cannot edit it because it is computed from the two fields
                                 above.</div>
                         </div>
+                        <hr>
+                        <h4>Options</h4>
+                        <div class="mb-3">
+                            <label for="lengthInput" class="form-label">Length: {{lengthInput}}</label>
+                            <input type="range" class="form-range" min="8" max="64" id="lengthInput"
+                                v-model="lengthInput" v-on:change="generatePassword">
+                            <div id="lengthInputInputHelp" class="form-text">Resize the length of your password between
+                                8 and 64 characters.</div>
+                        </div>
                     </form>
                 </div>
             </div>

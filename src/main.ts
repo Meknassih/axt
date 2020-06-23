@@ -6,11 +6,13 @@ const app = new Vue({
     data: {
         domainInput: '',
         masterPasswordInput: '',
-        generatedPasswordInput: ''
+        generatedPasswordInput: '',
+        lengthInput: 16
     },
     methods: {
         generatePassword: function (event) {
-            this.generatedPasswordInput = CryptoJS.HmacSHA224(this.domainInput, this.masterPasswordInput);
+            const hmac = CryptoJS.HmacSHA224(this.domainInput, this.masterPasswordInput);
+            this.generatedPasswordInput = CryptoJS.SHA256(hmac.toString()).toString().substr(0, this.lengthInput);
         }
     }
 });
